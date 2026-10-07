@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talha Store - Professional E-Commerce Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-left">
+                <a href="#">Become a Seller</a>
+                <a href="#">Help & Support</a>
+            </div>
+            <div class="top-header-right">
+                <div class="top-header-links" id="user-links">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                Talha<span>Store</span>
+            </a>
+            
+            <form class="search-bar" id="search-form">
+                <input type="text" id="search-input" placeholder="Search in Talha Store...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            
+            <div class="header-icons">
+                <a href="wishlist.html" class="icon-link">
+                    <i class="far fa-heart"></i>
+                    <span class="badge" id="wishlist-badge" style="display: none;">0</span>
+                </a>
+                <a href="cart.html" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge" id="cart-badge" style="display: none;">0</span>
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <i class="far fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="categories.html" style="font-weight: 700;"><i class="fas fa-list"></i> Categories</a>
+                <a href="#flash-sale" style="color: var(--primary-color);">Flash Sale</a>
+                <a href="products.html?category=electronics">Electronics</a>
+                <a href="products.html?category=mobiles">Mobiles</a>
+                <a href="products.html?category=men's fashion">Men's Fashion</a>
+                <a href="products.html?category=women's fashion">Women's Fashion</a>
+                <a href="products.html?category=home & kitchen">Home & Lifestyle</a>
+                <a href="products.html?category=beauty">Beauty</a>
+                <a href="products.html?category=grocery">Grocery</a>
+                <a href="products.html?category=sports">Sports</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Promo 1">
+                    <div class="slide-content">
+                        <h2>Mega Electronics Sale</h2>
+                        <p>Up to 50% off on top tech brands. Upgrade your life today.</p>
+                        <a href="products.html?category=electronics" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Promo 2">
+                    <div class="slide-content">
+                        <h2>Fashion Festival</h2>
+                        <p>Discover the latest trends in men's and women's fashion.</p>
+                        <a href="products.html?category=men's fashion" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Promo 3">
+                    <div class="slide-content">
+                        <h2>Home Essentials</h2>
+                        <p>Make your home a comfortable haven with our new collection.</p>
+                        <a href="products.html?category=home & kitchen" class="btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+            <a href="products.html?category=mobiles" class="category-card">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobiles</span>
+            </a>
+            <a href="products.html?category=computers" class="category-card">
+                <i class="fas fa-laptop"></i>
+                <span>Computers</span>
+            </a>
+            <a href="products.html?category=electronics" class="category-card">
+                <i class="fas fa-tv"></i>
+                <span>Electronics</span>
+            </a>
+            <a href="products.html?category=men's fashion" class="category-card">
+                <i class="fas fa-tshirt"></i>
+                <span>Men's Fashion</span>
+            </a>
+            <a href="products.html?category=women's fashion" class="category-card">
+                <i class="fas fa-female"></i>
+                <span>Women's Fashion</span>
+            </a>
+            <a href="products.html?category=shoes" class="category-card">
+                <i class="fas fa-shoe-prints"></i>
+                <span>Shoes</span>
+            </a>
+            <a href="products.html?category=beauty" class="category-card">
+                <i class="fas fa-spray-can"></i>
+                <span>Beauty</span>
+            </a>
+            <a href="products.html?category=home & kitchen" class="category-card">
+                <i class="fas fa-couch"></i>
+                <span>Home & Kitchen</span>
+            </a>
+            <a href="products.html?category=grocery" class="category-card">
+                <i class="fas fa-shopping-basket"></i>
+                <span>Grocery</span>
+            </a>
+            <a href="products.html?category=sports" class="category-card">
+                <i class="fas fa-dumbbell"></i>
+                <span>Sports</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Flash Sale -->
+    <section class="flash-sale container" id="flash-sale">
+        <div class="flash-sale-header">
+            <h2>Flash Sale</h2>
+            <div class="countdown" id="countdown">
+                <span>Ending in</span>
+                <span id="hours">00</span> :
+                <span id="minutes">00</span> :
+                <span id="seconds">00</span>
+            </div>
+            <a href="products.html" class="see-more">See All Items</a>
+        </div>
+        <div class="product-grid" id="flash-sale-grid">
+            <!-- Populated by JS -->
+        </div>
+    </section>
+
+    <!-- Just For You -->
+    <section class="container" style="margin-bottom: 50px;">
+        <h2 class="section-title">Just For You</h2>
+        <div class="product-grid" id="just-for-you-grid">
+            <!-- Populated by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="products.html" class="btn btn-outline" style="width: 200px;">Load More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">How to Buy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Talha Store</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p style="font-size:14px; margin-bottom:10px; color:var(--text-light);">Subscribe for updates & promotions.</p>
+                    <form style="display:flex;">
+                        <input type="email" placeholder="Your Email" style="padding:8px; width:100%; border:1px solid #ddd; outline:none;">
+                        <button type="submit" style="padding:8px 15px; background:var(--primary-color); color:#fff; border:none; cursor:pointer;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Talha Store. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

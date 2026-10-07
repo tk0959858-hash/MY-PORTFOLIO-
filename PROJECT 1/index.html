@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakFood | Premium Gourmet & Online Food Delivery</title>
+    <meta name="description" content="Experience authentic Pakistani cuisine, gourmet burgers, wood-fired pizzas, and sizzling karahis delivered fresh to your doorstep in 30 minutes.">
+    <meta name="keywords" content="PakFood, Food Delivery, Biryani, Mutton Karahi, Fast Food, Online Ordering, Restaurant">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-utensils"></i> Pak<span>Food</span>
+            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#offers" class="nav-link">Offers</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="cart-trigger" id="cartTrigger" aria-label="Open Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge-express">
+                            <i class="fas fa-bolt"></i> 30-Min Express Delivery Guaranteed
+                        </div>
+                        <h1 class="hero-title serif-title">
+                            Authentic Pakistani & Gourmet Meals, <span class="gradient-text">Delivered Hot</span> 🔥
+                        </h1>
+                        <p class="hero-bio">
+                            Savor mouth-watering Chicken Biryani, sizzling Mutton Karahi, juicy gourmet burgers, and artisan pizzas prepared fresh by master chefs with 100% Halal ingredients.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#menu" class="btn btn-primary">
+                                <i class="fas fa-utensils"></i> Order Online Now
+                            </a>
+                            <a href="#offers" class="btn btn-secondary">
+                                <i class="fas fa-tag"></i> Claim 20% OFF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-img-wrap">
+                            <img src="IMAGES/biryani.jpg" alt="PakFood Special Biryani" id="heroImage">
+                        </div>
+                        <div class="floating-dish-card">
+                            <img src="IMAGES/biryani.jpg" alt="Special Biryani">
+                            <div class="floating-info">
+                                <h5>Special Chicken Biryani</h5>
+                                <p>Rs 750</p>
+                            </div>
+                            <button class="btn btn-primary btn-sm" onclick="quickAddHeroDish()" style="padding: 6px 12px; font-size: 0.8rem;">
+                                + Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limited-Time Promotional Banner Section -->
+        <section class="container" id="offers">
+            <div class="offer-banner">
+                <div class="offer-text">
+                    <span class="section-subtitle" style="background: rgba(239, 68, 68, 0.2); color: var(--primary-crimson); border-color: rgba(239, 68, 68, 0.4);">
+                        🔥 Special 1-Month Promotion
+                    </span>
+                    <h2 class="serif-title">Get 20% OFF Your First Order!</h2>
+                    <p style="color: var(--text-muted);">Use promo code <strong style="color: var(--primary-amber); font-family: monospace; font-size: 1.1rem;">PAKFOOD20</strong> at checkout for instant discounts.</p>
+                    <div class="timer-box">
+                        <div class="timer-unit"><div class="timer-num" id="hours">08</div><div class="timer-lbl">Hours</div></div>
+                        <div class="timer-unit"><div class="timer-num" id="minutes">42</div><div class="timer-lbl">Mins</div></div>
+                        <div class="timer-unit"><div class="timer-num" id="seconds">15</div><div class="timer-lbl">Secs</div></div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#menu" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem;">
+                        <i class="fas fa-fire"></i> Claim Offer Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="section-padding" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Fresh & Hygienic</span>
+                    <h2 class="section-title serif-title">Explore Our Delicious Menu</h2>
+                    <p style="color: var(--text-muted);">Handcrafted recipes, rich aromatic spices, and unforgettable flavors.</p>
+                </div>
+
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search dishes (e.g. Biryani, Burger, Karahi)...">
+                    </div>
+                    <div class="menu-category-tabs" id="categoryTabs">
+                        <button class="cat-tab active" data-cat="all">All Dishes</button>
+                        <button class="cat-tab" data-cat="desi">Desi Specials</button>
+                        <button class="cat-tab" data-cat="karahi">BBQ & Karahi</button>
+                        <button class="cat-tab" data-cat="fastfood">Burgers & Pizza</button>
+                        <button class="cat-tab" data-cat="desserts">Desserts & Drinks</button>
+                    </div>
+                </div>
+
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Menu items rendered dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section-padding" id="why-us" style="background: rgba(0, 0, 0, 0.3);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Promise</span>
+                    <h2 class="section-title serif-title">Why Food Lovers Choose PakFood</h2>
+                    <p style="color: var(--text-muted);">We never compromise on food quality, speed, or cleanliness.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">100% Halal & Fresh</h3>
+                        <p>All meat and organic ingredients are sourced fresh daily from certified organic suppliers.</p>
+                    </div>
+
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><i class="fas fa-motorcycle"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">30-Min Fast Delivery</h3>
+                        <p>Insulated thermal delivery boxes keep your food piping hot right to your dining table.</p>
+                    </div>
+
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><i class="fas fa-hat-chef"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Master Chefs</h3>
+                        <p>Authentic traditional recipes cooked to perfection by experienced master chefs.</p>
+                    </div>
+
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><i class="fas fa-gift"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Free Delivery</h3>
+                        <p>Zero delivery charges on all orders above Rs 1000 anywhere in the city.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Testimonials Section -->
+        <section class="section-padding" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Happy Customers</span>
+                    <h2 class="section-title serif-title">What Our Customers Say</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px;">
+                    <div class="glass-card">
+                        <div class="rating" style="margin-bottom: 14px;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="margin-bottom: 20px; font-style: italic;">
+                            "The Special Mutton Karahi was absolute perfection! Delivered steaming hot within 25 minutes. Best food delivery service in town."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary-amber); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 800;">AH</div>
+                            <div>
+                                <h4 style="font-size: 1rem;">Ali Hassan</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-dim);">Verified Order</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="rating" style="margin-bottom: 14px;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="margin-bottom: 20px; font-style: italic;">
+                            "Chicken Biryani aroma was divine! Saffron rice, tender chicken leg, and fresh raita. Will definitely order again."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary-crimson); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800;">SK</div>
+                            <div>
+                                <h4 style="font-size: 1rem;">Sana Khan</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-dim);">Verified Order</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="rating" style="margin-bottom: 14px;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p style="margin-bottom: 20px; font-style: italic;">
+                            "Their Gourmet Beef Cheeseburger is massive and super juicy! Easy online ordering experience."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary-emerald); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800;">UR</div>
+                            <div>
+                                <h4 style="font-size: 1rem;">Usman Raza</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-dim);">Verified Order</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Order Inquiry Section -->
+        <section class="section-padding" id="contact" style="background: rgba(0, 0, 0, 0.3);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title serif-title">Table Reservation & Catering Inquiry</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;">
+                    <div class="glass-card">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Contact Information</h3>
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--primary-amber); font-size: 1.4rem;"></i>
+                                <div>
+                                    <h5 style="color: var(--text-muted); font-size: 0.85rem;">RESTAURANT ADDRESS</h5>
+                                    <p style="font-weight: 700; color: #fff;">Gulberg III, Main Boulevard, Lahore, Pakistan</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <i class="fas fa-phone-alt" style="color: var(--primary-amber); font-size: 1.4rem;"></i>
+                                <div>
+                                    <h5 style="color: var(--text-muted); font-size: 0.85rem;">PHONE / WHATSAPP</h5>
+                                    <p style="font-weight: 700; color: #fff;">+92 300 9876543 / 042 111-725-366</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <i class="fas fa-clock" style="color: var(--primary-amber); font-size: 1.4rem;"></i>
+                                <div>
+                                    <h5 style="color: var(--text-muted); font-size: 0.85rem;">OPENING HOURS</h5>
+                                    <p style="font-weight: 700; color: #fff;">11:00 AM – 02:00 AM (Mon - Sun)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <form id="inquiryForm" style="display: flex; flex-direction: column; gap: 16px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div>
+                                    <label style="font-size: 0.85rem; color: var(--text-muted);">Name</label>
+                                    <input type="text" id="inqName" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                                </div>
+                                <div>
+                                    <label style="font-size: 0.85rem; color: var(--text-muted);">Phone Number</label>
+                                    <input type="tel" id="inqPhone" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                                </div>
+                            </div>
+                            <div>
+                                <label style="font-size: 0.85rem; color: var(--text-muted);">Inquiry Type</label>
+                                <select id="inqType" style="width: 100%; padding: 12px; background: #12141c; border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                                    <option value="catering">Party / Event Catering</option>
+                                    <option value="table">Table Reservation</option>
+                                    <option value="feedback">General Feedback</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="font-size: 0.85rem; color: var(--text-muted);">Message / Special Requests</label>
+                                <textarea id="inqMessage" rows="3" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag" style="color: var(--primary-amber);"></i> Your Food Order</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="cart-items-list" id="cartItemsList">
+            <!-- Dynamic cart items -->
+        </div>
+
+        <div class="cart-footer">
+            <div style="margin-bottom: 15px; display: flex; gap: 8px;">
+                <input type="text" id="couponInput" placeholder="Promo code (PAKFOOD20)" style="flex-grow: 1; padding: 8px 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; font-size: 0.85rem; outline: none;">
+                <button class="btn btn-secondary btn-sm" onclick="applyCoupon()">Apply</button>
+            </div>
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">Rs 0</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee:</span>
+                <span id="cartDelivery">Rs 150</span>
+            </div>
+            <div class="summary-row" id="discountRow" style="display: none; color: var(--primary-emerald);">
+                <span>Discount (20%):</span>
+                <span id="cartDiscount">-Rs 0</span>
+            </div>
+            <div class="summary-row summary-total">
+                <span>Grand Total:</span>
+                <span id="cartTotal">Rs 0</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 15px;" onclick="openCheckoutModal()">
+                Proceed to Checkout <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-box">
+            <button class="cart-close" style="position: absolute; top: 15px; right: 15px;" onclick="closeCheckoutModal()"><i class="fas fa-times"></i></button>
+            <h2 class="serif-title" style="margin-bottom: 15px;"><i class="fas fa-truck" style="color: var(--primary-amber);"></i> Delivery & Checkout</h2>
+            
+            <form id="checkoutForm" style="display: flex; flex-direction: column; gap: 14px;">
+                <div>
+                    <label style="font-size: 0.85rem; color: var(--text-muted);">Full Name</label>
+                    <input type="text" id="custName" required placeholder="e.g. Ahmed Raza" style="width: 100%; padding: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; color: var(--text-muted);">Delivery Address</label>
+                    <input type="text" id="custAddress" required placeholder="House #, Street, Block, Area" style="width: 100%; padding: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; color: var(--text-muted);">Phone Number</label>
+                    <input type="tel" id="custPhone" required placeholder="0300-1234567" style="width: 100%; padding: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; color: var(--text-muted);">Payment Method</label>
+                    <select id="paymentMethod" style="width: 100%; padding: 10px; background: #12141c; border: 1px solid var(--border-glass); border-radius: var(--radius-sm); color: #fff; outline: none;">
+                        <option value="cod">Cash on Delivery (COD)</option>
+                        <option value="jazzcash">JazzCash / EasyPaisa</option>
+                        <option value="card">Credit / Debit Card</option>
+                    </select>
+                </div>
+                
+                <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 14px; border-radius: var(--radius-sm); margin-top: 5px;">
+                    <div style="display: flex; justify-content: space-between; font-weight: 800;">
+                        <span>Amount Payable:</span>
+                        <span id="checkoutTotalAmount" style="color: var(--primary-amber);">Rs 0</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
+                    <i class="fas fa-check-circle"></i> Confirm & Track Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Tracking Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-box" style="text-align: center;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 2px solid var(--primary-emerald); color: var(--primary-emerald); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 20px auto;">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2 class="serif-title" style="margin-bottom: 10px;">Order Placed Successfully!</h2>
+            <p style="margin-bottom: 15px;">Your order has been received by our kitchen and is being prepared with care.</p>
+            <div style="background: rgba(255,255,255,0.03); border: 1px dashed var(--primary-amber); padding: 14px; border-radius: var(--radius-sm); margin-bottom: 20px;">
+                <span style="font-size: 0.85rem; color: var(--text-dim);">ORDER TRACKING ID:</span><br>
+                <strong style="font-family: monospace; font-size: 1.4rem; color: var(--primary-amber);" id="trackingId">PF-98421</strong>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--primary-emerald); font-weight: 700; margin-bottom: 20px;">
+                <i class="fas fa-motorcycle"></i> Estimated Delivery Time: 25 - 30 Minutes
+            </p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">Got It, Thanks!</button>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#home" class="logo" style="justify-content: center; margin-bottom: 15px;">
+                <i class="fas fa-utensils"></i> Pak<span>Food</span>
+            </a>
+            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">
+                &copy; 2026 PakFood Online Delivery. Authentic Taste, Delivered Fast.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="#" style="color: var(--text-muted); font-size: 1.2rem;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: var(--text-muted); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: var(--text-muted); font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

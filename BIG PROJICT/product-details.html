@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Talha Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                Talha<span>Store</span>
+            </a>
+            <form class="search-bar" id="search-form">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge" id="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div style="padding: 15px 0; color: var(--text-light); font-size: 14px;">
+            <a href="index.html">Home</a> > <a href="products.html" id="breadcrumb-category">Category</a> > <span id="breadcrumb-title">Product</span>
+        </div>
+
+        <div class="product-details" id="product-details-container">
+            <!-- Left: Gallery -->
+            <div class="product-gallery">
+                <img src="" id="main-image" class="main-image" alt="Product Image">
+                <div class="thumbnail-list">
+                    <img src="" id="thumb-1" class="thumbnail active" alt="Thumb">
+                </div>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="product-info-full">
+                <h1 id="detail-title">Loading...</h1>
+                
+                <div class="rating-reviews">
+                    <div id="detail-stars"></div>
+                    <span id="detail-reviews">...</span>
+                </div>
+                
+                <div class="price-box">
+                    <span class="current" id="detail-price"></span>
+                    <span class="old" id="detail-old-price"></span>
+                    <span class="discount" id="detail-discount"></span>
+                </div>
+
+                <div class="quantity-selector">
+                    <span style="font-weight: 500;">Quantity:</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" id="qty-minus">-</button>
+                        <input type="text" class="qty-input" id="qty-input" value="1" readonly>
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-large btn-buy-now" id="detail-buy-now">Buy Now</button>
+                    <button class="btn btn-large btn-add-cart" id="detail-add-cart">Add to Cart</button>
+                </div>
+                
+                <div class="product-description">
+                    <h3 style="margin-bottom: 15px;">Product Description</h3>
+                    <p id="detail-description" style="color: var(--text-light); line-height: 1.6;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

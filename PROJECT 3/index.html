@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the sweet taste and rich nutrition of Mangoes. The king of fruits.">
+    <title>Mango Information | King of Fruits</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥭</text></svg>">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo">Mangoes.</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#varieties">Varieties</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#order" class="btn-nav">Order Now</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>The King of <span class="highlight">Fruits</span></h1>
+            <p>Discover the sweet taste, juicy texture, and rich nutrition of nature's best gift.</p>
+            <a href="#order" class="btn-primary">Get Yours Today</a>
+        </div>
+        <div class="hero-media reveal">
+            <!-- Ensure fallback for the image/video if unavailable -->
+            <img class="hero-img" src="IMAGES/mango.jpeg" alt="Delicious Mangoes" onerror="this.src='https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=600&auto=format&fit=crop';">
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container flex-container">
+                <div class="text-content card reveal">
+                    <h2>Welcome to the World of Mangoes</h2>
+                    <p>Mango is one of the most delicious and popular fruits globally. Loved for its sweetest juicy texture and rich nutritional value. Explore different mango varieties, their health benefits, and interesting facts.</p>
+                    <ul class="feature-list">
+                        <li><span>✔</span> Sweet and Juicy</li>
+                        <li><span>✔</span> Rich in Vitamins</li>
+                        <li><span>✔</span> Good for Health</li>
+                        <li><span>✔</span> Loved Worldwide</li>
+                    </ul>
+                </div>
+                <div class="media-content reveal">
+                    <video class="video-box" src="IMAGES/mangovidio.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+        </section>
+
+        <section id="varieties" class="section bg-light">
+            <div class="container reveal">
+                <h2 class="section-title">Popular Varieties</h2>
+                <div class="grid-cards">
+                    <div class="card variety-card">
+                        <h3>Sindhri</h3>
+                        <p>Known for its large size, sweet flavor, and soft texture. Often called the honey mango.</p>
+                    </div>
+                    <div class="card variety-card">
+                        <h3>Chaunsa</h3>
+                        <p>Exceptionally sweet with a unique fragrance. A favorite for juice and direct consumption.</p>
+                    </div>
+                    <div class="card variety-card">
+                        <h3>Anwar Ratol</h3>
+                        <p>Small in size but packs an incredibly sweet and aromatic punch.</p>
+                    </div>
+                    <div class="card variety-card">
+                        <h3>Langra</h3>
+                        <p>Stays green even when ripe. Famous for its distinct, slightly fibrous texture and strong flavor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section">
+            <div class="container reveal">
+                <h2 class="section-title">Health Benefits</h2>
+                <p class="subtitle">Mangoes are more than just a sweet treat; they are a nutritional powerhouse.</p>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="icon">👁️</div>
+                        <h4>Eye Health</h4>
+                        <p>Rich in Vitamin A, promoting good eyesight and preventing night blindness.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">🛡️</div>
+                        <h4>Immunity Boost</h4>
+                        <p>Packed with Vitamin C to help your body fight off infections.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">✨</div>
+                        <h4>Glowing Skin</h4>
+                        <p>Antioxidants and vitamins help clear clogged pores and make skin glow.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">⚕️</div>
+                        <h4>Digestion</h4>
+                        <p>Contains enzymes that aid in protein digestion and dietary fiber to keep the tract healthy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section bg-light">
+            <div class="container reveal">
+                <h2 class="section-title">Mango Gallery</h2>
+                <p class="subtitle">Fresh, juicy, and beautiful mangoes from nature's best collection.</p>
+                <div class="masonry-gallery">
+                    <img src="IMAGES/img1 (1).jpeg" alt="Mango Farm" onerror="this.src='https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?q=80&w=400&auto=format&fit=crop';">
+                    <img src="IMAGES/img2.jpeg" alt="Sliced Mango" onerror="this.src='https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=400&auto=format&fit=crop';">
+                    <img src="IMAGES/img3.jpeg" alt="Fresh Mangoes" onerror="this.src='https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=400&auto=format&fit=crop';">
+                    <img src="IMAGES/img4.jpeg" alt="Mango Juice" onerror="this.src='https://images.unsplash.com/photo-1623065422900-05810b14c330?q=80&w=600&auto=format&fit=crop';">
+                    <img src="IMAGES/img5.jpeg" alt="Mango Dessert" onerror="this.src='https://images.unsplash.com/photo-1599305090598-fe179d501227?q=80&w=600&auto=format&fit=crop';">
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="section">
+            <div class="container flex-container reveal">
+                <div class="form-container card glassmorphism">
+                    <h2>Place Your Order</h2>
+                    <form id="orderForm">
+                        <div class="input-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="123-456-7890">
+                        </div>
+                        <div class="input-group">
+                            <label for="quantity">Quantity (kg)</label>
+                            <input type="number" id="quantity" required min="1" value="1">
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Confirm Order</button>
+                    </form>
+                    <div id="formMessage" class="hidden message"></div>
+                </div>
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about bulk orders or shipping? Contact us directly.</p>
+                    <div class="contact-details">
+                        <p><strong>📍 Location:</strong> Pakistan</p>
+                        <p><strong>✉️ Email:</strong> info@mango.com</p>
+                        <p><strong>📞 Phone:</strong> 0334-7853276</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mangoes Info. Crafted with ❤️.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Talha Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i> Talha<span>Store</span>
+            </a>
+            <div style="font-weight: 600; font-size: 18px; color: var(--secondary-color);">Secure Checkout</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <form id="checkout-form">
+            <div class="checkout-layout">
+                <!-- Billing Details -->
+                <div class="checkout-form auth-form">
+                    <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Shipping Information</h3>
+                    
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="fullName" required placeholder="John Doe">
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label>Email Address</label>
+                            <input type="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" required placeholder="03XXXXXXXXX">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Complete Address</label>
+                        <input type="text" name="address" required placeholder="House, Street, Area">
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label>City</label>
+                            <input type="text" name="city" required placeholder="City">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>Province</label>
+                            <select name="province" required>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                                <option value="KPK">Khyber Pakhtunkhwa</option>
+                                <option value="Balochistan">Balochistan</option>
+                                <option value="Islamabad">Islamabad</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin: 30px 0 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="payment_method" value="Cash on Delivery" checked>
+                            <i class="fas fa-money-bill-wave" style="color: #28a745; margin: 0 10px;"></i> Cash on Delivery
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment_method" value="Credit/Debit Card">
+                            <i class="fas fa-credit-card" style="color: #007bff; margin: 0 10px;"></i> Credit / Debit Card
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment_method" value="EasyPaisa">
+                            <i class="fas fa-mobile-alt" style="color: #28a745; margin: 0 10px;"></i> EasyPaisa
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment_method" value="JazzCash">
+                            <i class="fas fa-mobile-alt" style="color: #dc3545; margin: 0 10px;"></i> JazzCash
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="cart-summary">
+                    <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Order Summary</h3>
+                    
+                    <div id="checkout-summary-items">
+                        <!-- Populated by JS -->
+                    </div>
+                    
+                    <div class="summary-row" style="margin-top: 20px; color: var(--text-light);">
+                        <span>Delivery Fee</span>
+                        <span>Rs. 150</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span id="checkout-total">Rs. 0</span>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 20px; font-size: 16px;">PLACE ORDER</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

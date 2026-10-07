@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro ToDo App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Sidebar / Controls -->
+        <aside class="sidebar">
+            <div class="header">
+                <i class="fa-solid fa-list-check logo-icon"></i>
+                <h1>My ToDo</h1>
+            </div>
+
+            <div class="add-task-section">
+                <div class="input-group">
+                    <input type="text" name="task" id="addTaskInp" placeholder="What needs to be done?">
+                    <button id="addBtn" class="primary-btn">Add</button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Total</div>
+                    <div class="stat-value text-blue" id="totalCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Completed</div>
+                    <div class="stat-value text-green" id="completedCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Pending</div>
+                    <div class="stat-value text-red" id="pendingCount">0</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <h3 class="filters-title">Filters</h3>
+                <div class="filter-buttons">
+                    <button id="allBtn" class="filter-btn">All Tasks</button>
+                    <button id="activeBtn" class="filter-btn">Active</button>
+                    <button id="completeBtn" class="filter-btn">Completed</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Task List -->
+        <main class="main-content">
+            <div class="main-header">
+                <h2><i class="fa-solid fa-clipboard-list"></i> All Tasks</h2>
+                <p>Manage your daily tasks efficiently.</p>
+            </div>
+            
+            <div id="taskList" class="task-list-container">
+                <!-- Tasks will be injected here by JS -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

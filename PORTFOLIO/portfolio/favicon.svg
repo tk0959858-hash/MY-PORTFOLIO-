@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#1a1a2e"/>
+  <!-- MT monogram -->
+  <text
+    x="7"
+    y="45"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="30"
+    font-weight="700"
+    letter-spacing="-1"
+    fill="#ffffff">MT</text>
+  <!-- Red dot accent -->
+  <circle cx="57" cy="42" r="5" fill="#c0392b"/>
+</svg>

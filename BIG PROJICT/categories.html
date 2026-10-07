@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Talha Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i> Talha<span>Store</span>
+            </a>
+            <form class="search-bar" id="search-form">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+                <a href="profile.html" class="icon-link"><i class="far fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-bottom: 50px;">
+        <h2 class="section-title" style="margin-top: 30px;">All Categories</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+            <!-- Category Cards -->
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-mobile-alt" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Mobiles</h3>
+                <a href="products.html?category=mobiles" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-laptop" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Computers</h3>
+                <a href="products.html?category=computers" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-tv" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Electronics</h3>
+                <a href="products.html?category=electronics" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-tshirt" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Men's Fashion</h3>
+                <a href="products.html?category=men's fashion" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-female" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Women's Fashion</h3>
+                <a href="products.html?category=women's fashion" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-shoe-prints" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Shoes</h3>
+                <a href="products.html?category=shoes" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-spray-can" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Beauty</h3>
+                <a href="products.html?category=beauty" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-couch" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Home & Kitchen</h3>
+                <a href="products.html?category=home & kitchen" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-shopping-basket" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Grocery</h3>
+                <a href="products.html?category=grocery" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+            <div class="category-card" style="padding: 30px 15px;">
+                <i class="fas fa-dumbbell" style="font-size: 40px; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 16px;">Sports</h3>
+                <a href="products.html?category=sports" class="btn btn-outline" style="margin-top: 10px; padding: 5px 15px; font-size: 13px;">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

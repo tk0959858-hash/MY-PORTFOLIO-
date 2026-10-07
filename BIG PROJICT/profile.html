@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Talha Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i> Talha<span>Store</span>
+            </a>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="products-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="filter-group">
+                    <h3 style="font-size: 18px;">My Account</h3>
+                    <ul class="filter-list" style="margin-top: 15px;">
+                        <li><a href="profile.html" style="color: var(--primary-color); font-weight: 500;"><i class="far fa-user"></i> Profile Info</a></li>
+                        <li><a href="orders.html"><i class="fas fa-box"></i> My Orders</a></li>
+                        <li><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a></li>
+                        <li><a href="#" id="logout-btn-sidebar"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div style="background-color: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
+                    <h2 style="margin-bottom: 25px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">My Profile</h2>
+                    
+                    <div id="profile-info">
+                        <!-- Populated by JS -->
+                        <div class="empty-state">Loading...</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('logout-btn-sidebar')?.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('talha_currentUser');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+</html>
